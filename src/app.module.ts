@@ -9,6 +9,6 @@ import { AppService } from './app.service';
   controllers: [MissionController],
   providers: [MissionService],
 })
-export class AppModule {}
+export class AppModule { }
 
 
