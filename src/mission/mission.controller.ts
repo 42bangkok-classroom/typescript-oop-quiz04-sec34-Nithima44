@@ -4,7 +4,7 @@ import { Get } from '@nestjs/common/decorators/http/request-mapping.decorator';
 
 @Controller('missions')
 export class MissionController {
-    constructor(private readonly missionService: MissionService) { }
+    constructor(private readonly missionService: MissionService) {}
 
     @Get('summary')
     getSummary() {

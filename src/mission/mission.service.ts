@@ -12,18 +12,19 @@ export class MissionService {
     ];
 
     getSummary(): Record<string, number> {
-        return this.missions.reduce((acc, currentMission) => {
-            const status = currentMission.status;
+        return this.missions.reduce(
+            (acc, mission) => {
+                if (!acc[mission.status]) {
+                    acc[mission.status] = 0;
+                }
+                acc[mission.status]++;
+                return acc;
+            },
+            {} as Record<string, number>,
+        );
 
-            if (!acc[status]) {
-                acc[status] = 0;
-            }
-
-            acc[status]++;
-
-            return acc;
-        }, {} as Record<string, number>);
     }
 
 }
+
 
