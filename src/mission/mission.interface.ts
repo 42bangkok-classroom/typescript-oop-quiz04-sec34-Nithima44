@@ -1,4 +1,4 @@
-interface IMission {
+export interface IMission {
   id: number;
   codename: string;
   status: 'ACTIVE' | 'COMPLETED' | 'FAILED';
@@ -6,4 +6,5 @@ interface IMission {
   riskLevel: 'LOW' | 'MEDIUM' | 'HIGH';
   startDate: Date;
   endDate: Date;
+durationDay?: number;
 }
